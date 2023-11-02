@@ -67,3 +67,10 @@ Differences between R and Python:
   uppercase_text = text.upper()
   ```
   
+## (c)
+
+
+ ```{r}
+
+```
+
