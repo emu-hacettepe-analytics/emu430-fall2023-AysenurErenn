@@ -104,7 +104,7 @@ na_example_no_na[is.na(na_example_no_na)] <- 0
 
 # Print the new data (without NAs) and count NAs in the new data
 print(na_example_no_na)
-print(paste("Total number of NAs in na_example_no_na:", sum(is.na(na_example_no_na))))
+print("Total number of NAs in na_example_no_na:", sum(is.na(na_example_no_na)))
 
 ```
 
