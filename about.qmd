@@ -10,16 +10,17 @@ sidebar: false
 # Work Experience
 
 ## Employements
+Turk Telekom, Part Time Corporate Pricing Intern, 2023 - ongoing
 
 ## Internships
 
-1.  Turk Telekom, Corporate Pricing Intern, year 2023
+1.  Turk Telekom, Corporate Pricing Intern, 2023
 
-2.  Karsan Automotive, Technical Sales Intern, year 2023
+2.  Karsan Automotive, Technical Sales Intern, 2023
 
-3.  Vestel, Production Intern, year 2022
+3.  Vestel, Production Intern, 2022
 
-4.  Koton, Retail Analytics Intern, year 2021
+4.  Koton, Retail Analytics Intern, 2021
 
 # Projects
 
@@ -30,3 +31,7 @@ R, Quarto, Git, Python, MS Office, SolidWorks, SQL
 # Hobbies
 
 Reading books, Travelling
+
+# Resume
+
+Here is my CV : [Click here to download my resume](CV.pdf)
