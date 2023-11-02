@@ -4,12 +4,40 @@ title: "Assignment 1"
 
 # Assignment 1
 
-```{r}
-1 + 1
-```
-
-My first assignment has two parts.
-
+My first assignment has Three parts.
 ## (a)
+Differences between R and Python:
+
+
+
 
 ## (b)
+
+Differences between R and Python:
+  1.
+  
+  R: In R, indices begin at 1. Additionally, it contains special data structures that are ideal for statistical analysis, such as factors, data frames, and vectors.
+  
+  Python: Python indexes data with a base of 0. Moreover, it makes use of more conventional data structures like sets, dictionaries, and lists. 
+  
+  2.
+  
+  R: The syntax of R is designed with statistical data analysis in mind. R code is frequently written in a way that is more functional.
+  
+  Python: Python is renowned for its readability and boasts a more versatile syntax. For code blocks, it employs indentation (whitespace).
+  
+  Example:
+  
+  In R:
+  
+  ```{r}
+  nums <- c(16, 20, 35, 63, 78)
+  mean <- mean(nums)
+  print(mean)
+  ```
+  In Python:
+  
+  ```{r}
+  nums = [16, 20, 35, 63, 78]
+  mean = sum(nums) / len(nums)
+  print(mean)
