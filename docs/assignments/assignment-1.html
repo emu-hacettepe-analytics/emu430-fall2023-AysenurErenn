@@ -207,6 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a>
   <ul class="collapse">
+  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
   </ul></li>
   </ul>
@@ -238,10 +239,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="assignment-1" class="level1">
 <h1>Assignment 1</h1>
-<p>My first assignment has Three parts. ## (a) Differences between R and Python:</p>
+<p>My first assignment has Three parts.</p>
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">(a)</h2>
+</section>
 <section id="b" class="level2">
 <h2 class="anchored" data-anchor-id="b">(b)</h2>
-<p>Differences between R and Python: 1.</p>
+<p>Differences between R and Python:</p>
+<ol type="1">
+<li></li>
+</ol>
 <p>R: In R, indices begin at 1. Additionally, it contains special data structures that are ideal for statistical analysis, such as factors, data frames, and vectors.</p>
 <p>Python: Python indexes data with a base of 0. Moreover, it makes use of more conventional data structures like sets, dictionaries, and lists.</p>
 <ol start="2" type="1">
@@ -257,7 +264,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>::: {.cell-output .cell-output-stdout} <code>[1] 42.4</code> ::: :::</p>
 <p>In Python:</p>
-<p>nums = [16, 20, 35, 63, 78] mean = sum(nums) / len(nums) print(mean)</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> [<span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">35</span>, <span class="dv">63</span>, <span class="dv">78</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> <span class="bu">sum</span>(nums) <span class="op">/</span> <span class="bu">len</span>(nums)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<ol start="3" type="1">
+<li></li>
+</ol>
+<p>R: R uses specific functions and expressions for string processing.</p>
+<p>Python: Python provides built-in string methods and libraries for string processing.</p>
+<p>Example:</p>
+<p>In R:</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"Hello, World!"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>uppercase_text <span class="ot">&lt;-</span> <span class="fu">toupper</span>(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+<p>In Python:</p>
+<p>::: {.cell}</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> <span class="st">"Hello, World!"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>uppercase_text <span class="op">=</span> text.upper()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
 
 
 </section>

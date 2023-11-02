@@ -5,8 +5,9 @@ title: "Assignment 1"
 # Assignment 1
 
 My first assignment has Three parts.
+
 ## (a)
-Differences between R and Python:
+
 
 
 
@@ -14,6 +15,7 @@ Differences between R and Python:
 ## (b)
 
 Differences between R and Python:
+
   1.
   
   R: In R, indices begin at 1. Additionally, it contains special data structures that are ideal for statistical analysis, such as factors, data frames, and vectors.
@@ -37,7 +39,31 @@ Differences between R and Python:
   ```
   In Python:
   
-  ```{r}
+  ```{py}
   nums = [16, 20, 35, 63, 78]
   mean = sum(nums) / len(nums)
   print(mean)
+  ```
+  
+  3.
+  
+  R: R uses specific functions and expressions for string processing.
+  
+  Python: Python provides built-in string methods and libraries for string processing.
+  
+  Example:
+  
+  In R:
+  
+  ```{r}
+  text <- "Hello, World!"
+  uppercase_text <- toupper(text)
+  ```
+  
+  In Python:
+  
+  ```{py}
+  text = "Hello, World!"
+  uppercase_text = text.upper()
+  ```
+  
