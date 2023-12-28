@@ -91,7 +91,23 @@ movies <- data.frame(Names,Years,Durations,Ratings,Votes)
 kable(head(movies, 10), caption = "Movies Dataframe")
 ```
 
-### Question 2
+### Question 3
+#a-)
+
+```{r}
+# Arrange the data frame in descending order by Rating
+movies <- movies[order(movies$Ratings, decreasing = TRUE),]
+
+# Top 5 and bottom 5 movies based on user ratings
+top5_movies <- head(movies, 5)
+bottom5_movies <- tail(movies, 5)
+
+# Print top and bottom movies
+cat("Top 5 Movies:\n")
+print(top5_movies)
+cat("Bottom 5 Movies:\n")
+print(bottom5_movies)
+```
 #a-)
 
 ```{r}
