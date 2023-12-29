@@ -191,3 +191,41 @@ ggplot(movies, aes(x = durations, y = ratings, color = ratings)) +
   scale_x_log10() +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+
+### Question 3
+
+```{r}
+
+url_3 <- "https://m.imdb.com/search/title/?title_type=feature&groups=top_1000&country_of_origin=TR"
+
+data_3 <- read_html(url_3)
+
+name_3 <-html_nodes(data_3,'.ipc-title__text')
+name_3 <- html_text(ame_3)
+name_3 <- tail(head(name_3,-1),-1)
+name_3 <- str_split(name_3, " ", n=2)
+name_3 <- unlist(lapply(name_3, function(x) {x[2]}))
+
+year_3 <- html_elements(data_3,'.dli-title-metadata > span:nth-child(1)')
+year_3 <- html_text(year_3)
+year_3 <- as.factor(year_3)
+
+imdb_top1000 <- data.frame(names=name_3,years=year_3)
+imdb_top1000
+
+#  Join the data frames
+
+imdb_top1000$year <- as.numeric(as.character(imdb_top1000$year)) 
+merged_data <- left_join(imdb_top1000,movies, by = c("names", "years"))
+merged_data
+
+#  The top 11 movies from first data frame based on their rank
+
+index_2 <- order(movies$rating,decreasing = TRUE )
+top_11 <- head(index_2,11)
+top_11 <- movies[top_11[1:11],]
+top_11
+
+```
+
+
