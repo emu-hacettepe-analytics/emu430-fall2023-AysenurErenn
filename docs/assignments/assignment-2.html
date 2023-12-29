@@ -344,24 +344,24 @@ The following object is masked from 'package:tidyr':
 <span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>votes_2 <span class="ot">&lt;-</span><span class="fu">as.numeric</span>(vote_2)</span>
 <span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Combining two link's datas</span></span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>Names <span class="ot">&lt;-</span> <span class="fu">c</span>(name_1,name_2)</span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>Ratings <span class="ot">&lt;-</span> <span class="fu">c</span>(rating_1,rating_2)</span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>Years <span class="ot">&lt;-</span><span class="fu">c</span>(year_1,year_2)</span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>Durations <span class="ot">&lt;-</span><span class="fu">c</span>(duration_1,duration_2)</span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>Votes <span class="ot">&lt;-</span><span class="fu">c</span>(vote_1,vote_2)</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(name_1,name_2)</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>ratings <span class="ot">&lt;-</span> <span class="fu">c</span>(rating_1,rating_2)</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>years <span class="ot">&lt;-</span><span class="fu">c</span>(year_1,year_2)</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>durations <span class="ot">&lt;-</span><span class="fu">c</span>(duration_1,duration_2)</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>votes <span class="ot">&lt;-</span><span class="fu">c</span>(vote_1,vote_2)</span>
 <span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Names,Years,Durations,Ratings,Votes)</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(names,years,durations,ratings,votes)</span>
 <span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(movies, <span class="dv">10</span>), <span class="at">caption =</span> <span class="st">"Movies Dataframe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <caption>Movies Dataframe</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Names</th>
-<th style="text-align: right;">Years</th>
-<th style="text-align: right;">Durations</th>
-<th style="text-align: right;">Ratings</th>
-<th style="text-align: left;">Votes</th>
+<th style="text-align: left;">names</th>
+<th style="text-align: right;">years</th>
+<th style="text-align: right;">durations</th>
+<th style="text-align: right;">ratings</th>
+<th style="text-align: left;">votes</th>
 </tr>
 </thead>
 <tbody>
@@ -370,70 +370,70 @@ The following object is masked from 'package:tidyr':
 <td style="text-align: right;">2009</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">8.0</td>
-<td style="text-align: left;">35018</td>
+<td style="text-align: left;">35020</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Babam ve Oglum</td>
 <td style="text-align: right;">2005</td>
 <td style="text-align: right;">108</td>
 <td style="text-align: right;">8.2</td>
-<td style="text-align: left;">91024</td>
+<td style="text-align: left;">91035</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Masumiyet</td>
 <td style="text-align: right;">1997</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">8.1</td>
-<td style="text-align: left;">19284</td>
+<td style="text-align: left;">19291</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Kader</td>
 <td style="text-align: right;">2006</td>
 <td style="text-align: right;">103</td>
 <td style="text-align: right;">7.8</td>
-<td style="text-align: left;">16251</td>
+<td style="text-align: left;">16259</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Uzak</td>
 <td style="text-align: right;">2002</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">7.5</td>
-<td style="text-align: left;">22364</td>
+<td style="text-align: left;">22371</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eskiya</td>
 <td style="text-align: right;">1996</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">8.1</td>
-<td style="text-align: left;">71698</td>
+<td style="text-align: left;">71703</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A.R.O.G</td>
 <td style="text-align: right;">2008</td>
 <td style="text-align: right;">127</td>
 <td style="text-align: right;">7.3</td>
-<td style="text-align: left;">44632</td>
+<td style="text-align: left;">44635</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sevmek Zamani</td>
 <td style="text-align: right;">1965</td>
 <td style="text-align: right;">86</td>
 <td style="text-align: right;">8.0</td>
-<td style="text-align: left;">7127</td>
+<td style="text-align: left;">7129</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Hababam Sinifi</td>
 <td style="text-align: right;">1975</td>
 <td style="text-align: right;">87</td>
 <td style="text-align: right;">9.2</td>
-<td style="text-align: left;">42512</td>
+<td style="text-align: left;">42513</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Üç Maymun</td>
 <td style="text-align: right;">2008</td>
 <td style="text-align: right;">109</td>
 <td style="text-align: right;">7.3</td>
-<td style="text-align: left;">22655</td>
+<td style="text-align: left;">22660</td>
 </tr>
 </tbody>
 </table>
@@ -445,7 +445,7 @@ The following object is masked from 'package:tidyr':
 <p>#a-)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrange the data frame in descending order by Rating</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> movies[<span class="fu">order</span>(movies<span class="sc">$</span>Ratings, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> movies[<span class="fu">order</span>(movies<span class="sc">$</span>ratings, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 5 and bottom 5 movies based on user ratings</span></span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>top5_movies <span class="ot">&lt;-</span> <span class="fu">head</span>(movies, <span class="dv">5</span>)</span>
@@ -458,12 +458,12 @@ The following object is masked from 'package:tidyr':
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top5_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                           Names Years Durations Ratings Votes
-9                 Hababam Sinifi  1975        87     9.2 42512
-261       CM101MMXI Fundamentals  2013       139     9.1 46995
-25                    Tosun Pasa  1976        90     8.9 24327
+<pre><code>                           names years durations ratings votes
+9                 Hababam Sinifi  1975        87     9.2 42513
+261       CM101MMXI Fundamentals  2013       139     9.1 46996
+25                    Tosun Pasa  1976        90     8.9 24329
 89  Hababam Sinifi Sinifta Kaldi  1975        95     8.9 24370
-73                 Süt Kardesler  1976        80     8.8 20886</code></pre>
+73                 Süt Kardesler  1976        80     8.8 20888</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Bottom 5 Movies:</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -471,18 +471,18 @@ The following object is masked from 'package:tidyr':
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bottom5_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                             Names Years Durations Ratings Votes
-411                 Cumali Ceber 2  2018       100     1.2 10228
+<pre><code>                             names years durations ratings votes
+411                 Cumali Ceber 2  2018       100     1.2 10229
 421                          Müjde  2022       288     1.2  9920
-467              15/07 Safak Vakti  2021        95     1.2 20606
-323 Cumali Ceber: Allah Seni Alsin  2017       100     1.0 39266
-372                           Reis  2017       108     1.0 73972</code></pre>
+467              15/07 Safak Vakti  2021        95     1.2 20608
+323 Cumali Ceber: Allah Seni Alsin  2017       100     1.0 39267
+372                           Reis  2017       108     1.0 73973</code></pre>
 </div>
 </div>
 <p>#a-)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrange the data frame in descending order by Rating</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> movies[<span class="fu">order</span>(movies<span class="sc">$</span>Ratings, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> movies[<span class="fu">order</span>(movies<span class="sc">$</span>ratings, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Top 5 and bottom 5 movies based on user ratings</span></span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>top5_movies <span class="ot">&lt;-</span> <span class="fu">head</span>(movies, <span class="dv">5</span>)</span>
@@ -495,12 +495,12 @@ The following object is masked from 'package:tidyr':
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(top5_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                           Names Years Durations Ratings Votes
-9                 Hababam Sinifi  1975        87     9.2 42512
-261       CM101MMXI Fundamentals  2013       139     9.1 46995
-25                    Tosun Pasa  1976        90     8.9 24327
+<pre><code>                           names years durations ratings votes
+9                 Hababam Sinifi  1975        87     9.2 42513
+261       CM101MMXI Fundamentals  2013       139     9.1 46996
+25                    Tosun Pasa  1976        90     8.9 24329
 89  Hababam Sinifi Sinifta Kaldi  1975        95     8.9 24370
-73                 Süt Kardesler  1976        80     8.8 20886</code></pre>
+73                 Süt Kardesler  1976        80     8.8 20888</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Bottom 5 Movies:</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -508,12 +508,57 @@ The following object is masked from 'package:tidyr':
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(bottom5_movies)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                             Names Years Durations Ratings Votes
-411                 Cumali Ceber 2  2018       100     1.2 10228
+<pre><code>                             names years durations ratings votes
+411                 Cumali Ceber 2  2018       100     1.2 10229
 421                          Müjde  2022       288     1.2  9920
-467              15/07 Safak Vakti  2021        95     1.2 20606
-323 Cumali Ceber: Allah Seni Alsin  2017       100     1.0 39266
-372                           Reis  2017       108     1.0 73972</code></pre>
+467              15/07 Safak Vakti  2021        95     1.2 20608
+323 Cumali Ceber: Allah Seni Alsin  2017       100     1.0 39267
+372                           Reis  2017       108     1.0 73973</code></pre>
+</div>
+</div>
+<p>#c-)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot of Number of Movies Over the Years</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(years))) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"orange"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Number of Movies"</span>) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Number of Movies Over the Years"</span>) <span class="sc">+</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">6</span>),</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Average Ratings of movies over the years</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>movies <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(years) <span class="sc">%&gt;%</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">rating_averages =</span> <span class="fu">mean</span>(ratings)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(years, rating_averages)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Years"</span>, <span class="at">y =</span> <span class="st">"Rating Averages"</span>) <span class="sc">+</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Average Ratings of Turkish Movies Over the Years"</span>) <span class="sc">+</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment-2_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Box Plots of Movie Ratings Over the Years</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>movies<span class="sc">$</span>years <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(movies<span class="sc">$</span>years)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies, <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> ratings, <span class="at">fill =</span> <span class="fu">factor</span>(years))) <span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">outlier.color =</span> <span class="st">"orange"</span>, <span class="at">notch =</span> <span class="cn">FALSE</span>, <span class="at">notchwidth =</span> <span class="fl">0.5</span>, <span class="at">width =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Rating"</span>) <span class="sc">+</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Movie Ratings Over the Years"</span>) <span class="sc">+</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>)) <span class="sc">+</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">substr</span>(x, <span class="dv">1</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment-2_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
