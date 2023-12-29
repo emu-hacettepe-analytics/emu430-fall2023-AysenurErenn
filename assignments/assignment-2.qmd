@@ -114,6 +114,10 @@ print(bottom5_movies)
 
 # b-)
 
+```{r}
+movies %>% 
+  filter(names == "Ayla" | names == "Yedinci Kogustaki Mucize" | names == "Babam ve Oglum")
+```
 # c-)
 
 ```{r}
