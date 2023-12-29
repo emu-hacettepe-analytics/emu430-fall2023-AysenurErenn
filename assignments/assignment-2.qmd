@@ -2,12 +2,12 @@
 title: "Assignment 2"
 ---
 
-# Assignment 2
-
 ### Question 1
 ```{r}
 # Loading necessary libraries
 suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(reshape2))
+suppressPackageStartupMessages(library(rvest))
 library(tidyverse)
 library(stringr)
 library(rvest)
