@@ -172,3 +172,18 @@ ggplot(movies, aes(x = votes, y = ratings, color = ratings)) +
   theme(legend.position = "none") +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+
+# e-)
+```{r}
+correlation_duration_rating <- cor(movies$durations, movies$ratings)
+cat("Correlation between Duration and Ratings:", correlation_duration_rating, "\n")
+ggplot(movies, aes(x = durations, y = ratings, color = ratings)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, color = "orange", show.legend = FALSE) +
+  labs(x = "Durations", y = "Ratings") +
+  ggtitle("Scatter Plot of Durations vs Ratings") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  scale_x_log10() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
