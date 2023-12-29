@@ -210,6 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#a-" id="toc-a-" class="nav-link" data-scroll-target="#a-">a-)</a></li>
   <li><a href="#b-" id="toc-b-" class="nav-link" data-scroll-target="#b-">b-)</a></li>
   <li><a href="#c-" id="toc-c-" class="nav-link" data-scroll-target="#c-">c-)</a></li>
+  <li><a href="#d-" id="toc-d-" class="nav-link" data-scroll-target="#d-">d-)</a></li>
   </ul>
 </nav>
 </nav>
@@ -316,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>vote_2 <span class="ot">&lt;-</span> <span class="fu">html_text</span>(vote_2)</span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>vote_2 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="at">pattern =</span> <span class="st">"Votes"</span>, <span class="at">replacement =</span> <span class="st">""</span>, <span class="at">x =</span> vote_2)</span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>vote_2 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="at">pattern =</span> <span class="st">","</span>, <span class="at">replacement =</span> <span class="st">""</span>, <span class="at">x =</span> vote_2)</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>votes_2 <span class="ot">&lt;-</span><span class="fu">as.numeric</span>(vote_2)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>vote_2 <span class="ot">&lt;-</span><span class="fu">as.numeric</span>(vote_2)</span>
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Combining two link's datas</span></span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(name_1,name_2)</span>
@@ -336,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th style="text-align: right;">years</th>
 <th style="text-align: right;">durations</th>
 <th style="text-align: right;">ratings</th>
-<th style="text-align: left;">votes</th>
+<th style="text-align: right;">votes</th>
 </tr>
 </thead>
 <tbody>
@@ -345,70 +346,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2009</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">8.0</td>
-<td style="text-align: left;">35020</td>
+<td style="text-align: right;">35020</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Babam ve Oglum</td>
 <td style="text-align: right;">2005</td>
 <td style="text-align: right;">108</td>
 <td style="text-align: right;">8.2</td>
-<td style="text-align: left;">91035</td>
+<td style="text-align: right;">91035</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Masumiyet</td>
 <td style="text-align: right;">1997</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">8.1</td>
-<td style="text-align: left;">19291</td>
+<td style="text-align: right;">19291</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Kader</td>
 <td style="text-align: right;">2006</td>
 <td style="text-align: right;">103</td>
 <td style="text-align: right;">7.8</td>
-<td style="text-align: left;">16259</td>
+<td style="text-align: right;">16259</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Uzak</td>
 <td style="text-align: right;">2002</td>
 <td style="text-align: right;">110</td>
 <td style="text-align: right;">7.5</td>
-<td style="text-align: left;">22371</td>
+<td style="text-align: right;">22371</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Eskiya</td>
 <td style="text-align: right;">1996</td>
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">8.1</td>
-<td style="text-align: left;">71703</td>
+<td style="text-align: right;">71703</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A.R.O.G</td>
 <td style="text-align: right;">2008</td>
 <td style="text-align: right;">127</td>
 <td style="text-align: right;">7.3</td>
-<td style="text-align: left;">44635</td>
+<td style="text-align: right;">44635</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sevmek Zamani</td>
 <td style="text-align: right;">1965</td>
 <td style="text-align: right;">86</td>
 <td style="text-align: right;">8.0</td>
-<td style="text-align: left;">7129</td>
+<td style="text-align: right;">7129</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Hababam Sinifi</td>
 <td style="text-align: right;">1975</td>
 <td style="text-align: right;">87</td>
 <td style="text-align: right;">9.2</td>
-<td style="text-align: left;">42513</td>
+<td style="text-align: right;">42513</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Üç Maymun</td>
 <td style="text-align: right;">2008</td>
 <td style="text-align: right;">109</td>
 <td style="text-align: right;">7.3</td>
-<td style="text-align: left;">22660</td>
+<td style="text-align: right;">22660</td>
 </tr>
 </tbody>
 </table>
@@ -504,6 +505,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">substr</span>(x, <span class="dv">1</span>, <span class="dv">4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="assignment-2_files/figure-html/unnamed-chunk-4-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="d-" class="level1">
+<h1>d-)</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(movies<span class="sc">$</span>votes, movies<span class="sc">$</span>ratings)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Correlation between Votes and Ratings:"</span>, correlation, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correlation between Votes and Ratings: 0.1307806 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies, <span class="fu">aes</span>(<span class="at">x =</span> votes, <span class="at">y =</span> ratings, <span class="at">color =</span> ratings)) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">formula =</span> y <span class="sc">~</span> x) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Votes"</span>, <span class="at">y =</span> <span class="st">"Ratings"</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Scatter Plot of Votes vs Ratings"</span>) <span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="assignment-2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

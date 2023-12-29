@@ -80,7 +80,7 @@ vote_2 <- data_2 |> html_nodes('.kRnqtn')
 vote_2 <- html_text(vote_2)
 vote_2 <- sub(pattern = "Votes", replacement = "", x = vote_2)
 vote_2 <- sub(pattern = ",", replacement = "", x = vote_2)
-votes_2 <-as.numeric(vote_2)
+vote_2 <-as.numeric(vote_2)
 
 # Combining two link's datas
 names <- c(name_1,name_2)
@@ -155,4 +155,20 @@ ggplot(movies, aes(x = years, y = ratings, fill = factor(years))) +
         plot.title = element_text(size = 12, hjust = 0.5)) +
   scale_x_discrete(labels = function(x) substr(x, 1, 4))
 
+```
+
+
+# d-)
+```{r}
+
+correlation <- cor(movies$votes, movies$ratings)
+cat("Correlation between Votes and Ratings:", correlation, "\n")
+ggplot(movies, aes(x = votes, y = ratings, color = ratings)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "orange", formula = y ~ x) +
+  labs(x = "Votes", y = "Ratings") +
+  ggtitle("Scatter Plot of Votes vs Ratings") +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = 0.5))
 ```
