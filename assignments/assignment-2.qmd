@@ -4,6 +4,8 @@ title: "Assignment 2"
 
 ### Question 1
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # Loading necessary libraries
 suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(reshape2))
@@ -26,6 +28,8 @@ url_2010_2023 <- "https://m.imdb.com/search/title/?title_type=feature&release_da
 
 ### Question 2
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 data_1 <- read_html(url_before_2010)
 
 # Scraping and cleaning movie datas before year 2010
@@ -98,6 +102,8 @@ kable(head(movies, 10), caption = "Movies Dataframe")
 # a-)
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # Arrange the data frame in descending order by Rating
 movies <- movies[order(movies$ratings, decreasing = TRUE),]
 
@@ -120,12 +126,16 @@ I don't have enough information to comment on the last 5 movies. There are some 
 
 Here are my top three favorite movies from that list.
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 movies %>% 
   filter(names == "Ayla: The Daughter of War" | names == "Yedinci Kogustaki Mucize" | names == "Babam ve Oglum")
 ```
 # c-)
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # Bar plot of Number of Movies Over the Years
 
 ggplot(movies, aes(x = factor(years))) +
@@ -140,6 +150,8 @@ ggplot(movies, aes(x = factor(years))) +
 ```
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # Average Ratings of movies over the years
 
 movies %>%
@@ -153,6 +165,8 @@ movies %>%
 Plot shows a definite downward trend in ratings over time.
 
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 # Box Plots of Movie Ratings Over the Years
 movies$years <- as.factor(movies$years)
 ggplot(movies, aes(x = years, y = ratings, fill = factor(years))) +
@@ -171,7 +185,8 @@ Over the years, ratings have declined, with the gap between film ratings widenin
 
 # d-)
 ```{r}
-
+#| code-fold: true
+#| code-summary: "Show the code"
 correlation <- cor(movies$votes, movies$ratings)
 cat("Correlation between Votes and Ratings:", correlation, "\n")
 ggplot(movies, aes(x = votes, y = ratings, color = ratings)) +
@@ -188,6 +203,8 @@ The correlation coefficient, which stands at 0.130875, is rather low. We might c
 
 # e-)
 ```{r}
+#| code-fold: true
+#| code-summary: "Show the code"
 correlation_duration_rating <- cor(movies$durations, movies$ratings)
 cat("Correlation between Duration and Ratings:", correlation_duration_rating, "\n")
 ggplot(movies, aes(x = durations, y = ratings, color = ratings)) +
@@ -206,7 +223,8 @@ With a correlation of 0.03186651, it is rather low. We may conclude that there i
 ### Question 4
 
 ```{r}
-
+#| code-fold: true
+#| code-summary: "Show the code"
 url_3 <- "https://m.imdb.com/search/title/?title_type=feature&groups=top_1000&country_of_origin=TR"
 
 data_3 <- read_html(url_3)
