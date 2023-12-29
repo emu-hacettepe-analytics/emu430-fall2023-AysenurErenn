@@ -118,6 +118,7 @@ I don't have enough information to comment on the last 5 movies. There are some 
 
 # b-)
 
+Here are my top three favorite movies from that list.
 ```{r}
 movies %>% 
   filter(names == "Ayla: The Daughter of War" | names == "Yedinci Kogustaki Mucize" | names == "Babam ve Oglum")
@@ -136,8 +137,9 @@ ggplot(movies, aes(x = factor(years))) +
         axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
         axis.text.y = element_text(size = 8),
         plot.title = element_text(size = 12, hjust = 0.5))
+```
 
-
+```{r}
 # Average Ratings of movies over the years
 
 movies %>%
@@ -147,10 +149,11 @@ movies %>%
   labs(x = "Years", y = "Rating Averages") +
   ggtitle("Average Ratings of Turkish Movies Over the Years") +
   theme(plot.title = element_text(hjust = 0.5))
+```
+Plot shows a definite downward trend in ratings over time.
 
-
+```{r}
 # Box Plots of Movie Ratings Over the Years
-
 movies$years <- as.factor(movies$years)
 ggplot(movies, aes(x = years, y = ratings, fill = factor(years))) +
   geom_boxplot(color = "blue", outlier.color = "orange", notch = FALSE, notchwidth = 0.5, width = 0.6) +
@@ -164,7 +167,7 @@ ggplot(movies, aes(x = years, y = ratings, fill = factor(years))) +
   scale_x_discrete(labels = function(x) substr(x, 1, 4))
 
 ```
-
+Over the years, ratings have declined, with the gap between film ratings widening noticeably and significantly.
 
 # d-)
 ```{r}
@@ -236,4 +239,6 @@ top_11
 
 ```
 
+If you compare both tables, the first thing you will notice is the year of release of the movies, especially the lack of older movies in the TOP 1000 IMDB list.
+It's very likely that you're only considering movies released after a certain year.
 
