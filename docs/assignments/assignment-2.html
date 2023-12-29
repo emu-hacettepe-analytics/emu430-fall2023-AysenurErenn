@@ -211,7 +211,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#b-" id="toc-b-" class="nav-link" data-scroll-target="#b-">b-)</a></li>
   <li><a href="#c-" id="toc-c-" class="nav-link" data-scroll-target="#c-">c-)</a></li>
   <li><a href="#d-" id="toc-d-" class="nav-link" data-scroll-target="#d-">d-)</a></li>
-  <li><a href="#e-" id="toc-e-" class="nav-link" data-scroll-target="#e-">e-)</a></li>
+  <li><a href="#e-" id="toc-e-" class="nav-link" data-scroll-target="#e-">e-)</a>
+  <ul class="collapse">
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -463,11 +466,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>b-)</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>movies <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(names <span class="sc">==</span> <span class="st">"Ayla"</span> <span class="sc">|</span> names <span class="sc">==</span> <span class="st">"Yedinci Kogustaki Mucize"</span> <span class="sc">|</span> names <span class="sc">==</span> <span class="st">"Babam ve Oglum"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(names <span class="sc">==</span> <span class="st">"Ayla: The Daughter of War"</span> <span class="sc">|</span> names <span class="sc">==</span> <span class="st">"Yedinci Kogustaki Mucize"</span> <span class="sc">|</span> names <span class="sc">==</span> <span class="st">"Babam ve Oglum"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                     names years durations ratings votes
-1           Babam ve Oglum  2005       108     8.2 91035
-2 Yedinci Kogustaki Mucize  2019       132     8.2 54171</code></pre>
+<pre><code>                      names years durations ratings votes
+1 Ayla: The Daughter of War  2017       125     8.3 42992
+2            Babam ve Oglum  2005       108     8.2 91035
+3  Yedinci Kogustaki Mucize  2019       132     8.2 54171</code></pre>
 </div>
 </div>
 </section>
@@ -560,8 +564,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="assignment-2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>url_3 <span class="ot">&lt;-</span> <span class="st">"https://m.imdb.com/search/title/?title_type=feature&amp;groups=top_1000&amp;country_of_origin=TR"</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>data_3 <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url_3)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>name_3 <span class="ot">&lt;-</span><span class="fu">html_nodes</span>(data_3,<span class="st">'.ipc-title__text'</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>name_3 <span class="ot">&lt;-</span> <span class="fu">html_text</span>(name_3)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>name_3 <span class="ot">&lt;-</span> <span class="fu">tail</span>(<span class="fu">head</span>(name_3,<span class="sc">-</span><span class="dv">1</span>),<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>name_3 <span class="ot">&lt;-</span> <span class="fu">str_split</span>(name_3, <span class="st">" "</span>, <span class="at">n=</span><span class="dv">2</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>name_3 <span class="ot">&lt;-</span> <span class="fu">unlist</span>(<span class="fu">lapply</span>(name_3, <span class="cf">function</span>(x) {x[<span class="dv">2</span>]}))</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>year_3 <span class="ot">&lt;-</span> <span class="fu">html_elements</span>(data_3,<span class="st">'.dli-title-metadata &gt; span:nth-child(1)'</span>)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>year_3 <span class="ot">&lt;-</span> <span class="fu">html_text</span>(year_3)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>year_3 <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(year_3)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>imdb_top1000 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">names=</span>name_3,<span class="at">years=</span>year_3)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>imdb_top1000</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       names years
+1   Yedinci Kogustaki Mucize  2019
+2                 Kis Uykusu  2014
+3      Nefes: Vatan Sagolsun  2009
+4  Ayla: The Daughter of War  2017
+5             Babam ve Oglum  2005
+6                Ahlat Agaci  2018
+7    Bir Zamanlar Anadolu'da  2011
+8                     Eskiya  1996
+9                   G.O.R.A.  2004
+10                 Vizontele  2001
+11  Her Sey Çok Güzel Olacak  1998</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  Join the data frames</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>imdb_top1000<span class="sc">$</span>year <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(imdb_top1000<span class="sc">$</span>year)) </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>merged_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(imdb_top1000,movies, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"names"</span>, <span class="st">"years"</span>))</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>merged_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       names years year durations ratings votes
+1   Yedinci Kogustaki Mucize  2019 2019       132     8.2 54171
+2                 Kis Uykusu  2014 2014       196     8.0 54646
+3      Nefes: Vatan Sagolsun  2009 2009       128     8.0 35022
+4  Ayla: The Daughter of War  2017 2017       125     8.3 42992
+5             Babam ve Oglum  2005 2005       108     8.2 91035
+6                Ahlat Agaci  2018 2018       188     8.0 27015
+7    Bir Zamanlar Anadolu'da  2011 2011       157     7.8 49365
+8                     Eskiya  1996 1996       128     8.1 71704
+9                   G.O.R.A.  2004 2004       127     8.0 66033
+10                 Vizontele  2001 2001       110     8.0 38403
+11  Her Sey Çok Güzel Olacak  1998 1998       107     8.1 27122</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  The top 11 movies from first data frame based on their rank</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>index_2 <span class="ot">&lt;-</span> <span class="fu">order</span>(movies<span class="sc">$</span>rating,<span class="at">decreasing =</span> <span class="cn">TRUE</span> )</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>top_11 <span class="ot">&lt;-</span> <span class="fu">head</span>(index_2,<span class="dv">11</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>top_11 <span class="ot">&lt;-</span> movies[top_11[<span class="dv">1</span><span class="sc">:</span><span class="dv">11</span>],]</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>top_11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                           names years durations ratings votes
+9                 Hababam Sinifi  1975        87     9.2 42512
+261       CM101MMXI Fundamentals  2013       139     9.1 46996
+25                    Tosun Pasa  1976        90     8.9 24329
+89  Hababam Sinifi Sinifta Kaldi  1975        95     8.9 24369
+73                 Süt Kardesler  1976        80     8.8 20889
+36              Saban Oglu Saban  1977        90     8.7 18534
+59                    Zügürt Aga  1985       101     8.7 16135
+69                 Neseli Günler  1978        95     8.7 11807
+75                   Kibar Feyzo  1978        83     8.7 17126
+132      Hababam Sinifi Uyaniyor  1976        94     8.7 20640
+95                Canim Kardesim  1973        85     8.6 10097</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

@@ -116,7 +116,7 @@ print(bottom5_movies)
 
 ```{r}
 movies %>% 
-  filter(names == "Ayla" | names == "Yedinci Kogustaki Mucize" | names == "Babam ve Oglum")
+  filter(names == "Ayla: The Daughter of War" | names == "Yedinci Kogustaki Mucize" | names == "Babam ve Oglum")
 ```
 # c-)
 
@@ -192,7 +192,7 @@ ggplot(movies, aes(x = durations, y = ratings, color = ratings)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-### Question 3
+### Question 4
 
 ```{r}
 
@@ -201,7 +201,7 @@ url_3 <- "https://m.imdb.com/search/title/?title_type=feature&groups=top_1000&co
 data_3 <- read_html(url_3)
 
 name_3 <-html_nodes(data_3,'.ipc-title__text')
-name_3 <- html_text(ame_3)
+name_3 <- html_text(name_3)
 name_3 <- tail(head(name_3,-1),-1)
 name_3 <- str_split(name_3, " ", n=2)
 name_3 <- unlist(lapply(name_3, function(x) {x[2]}))
