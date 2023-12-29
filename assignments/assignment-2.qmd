@@ -112,6 +112,10 @@ cat("Bottom 5 Movies:\n")
 print(bottom5_movies)
 ```
 
+I can say the following about the films in the top 5: Like all Turkish people, I watched them all many times and I think they deserve the ratings they got. All of them are movies that have been watched over and over again for years and continue to be watched.
+
+I don't have enough information to comment on the last 5 movies. There are some I've heard of but I haven't watched any of them.
+
 # b-)
 
 ```{r}
@@ -177,6 +181,8 @@ ggplot(movies, aes(x = votes, y = ratings, color = ratings)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
+The correlation coefficient, which stands at 0.130875, is rather low. We might conclude that there is a weak linear relationship between Ratings and Votes in this instance.
+
 # e-)
 ```{r}
 correlation_duration_rating <- cor(movies$durations, movies$ratings)
@@ -191,6 +197,8 @@ ggplot(movies, aes(x = durations, y = ratings, color = ratings)) +
   scale_x_log10() +
   theme(plot.title = element_text(hjust = 0.5))
 ```
+
+With a correlation of 0.03186651, it is rather low. We may conclude that there is a weak linear relationship between Durations and Votes in this instance. We may conclude that there is a better correlation between Ratings and Votes when comparing Ratings with Durations and Ratings with Votes. 
 
 ### Question 4
 

@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2005</td>
 <td style="text-align: right;">108</td>
 <td style="text-align: right;">8.2</td>
-<td style="text-align: right;">91035</td>
+<td style="text-align: right;">91037</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Masumiyet</td>
@@ -371,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2006</td>
 <td style="text-align: right;">103</td>
 <td style="text-align: right;">7.8</td>
-<td style="text-align: right;">16263</td>
+<td style="text-align: right;">16264</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Uzak</td>
@@ -413,7 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;">2008</td>
 <td style="text-align: right;">109</td>
 <td style="text-align: right;">7.3</td>
-<td style="text-align: right;">22662</td>
+<td style="text-align: right;">22663</td>
 </tr>
 </tbody>
 </table>
@@ -442,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>                           names years durations ratings votes
 9                 Hababam Sinifi  1975        87     9.2 42512
-261       CM101MMXI Fundamentals  2013       139     9.1 46996
+261       CM101MMXI Fundamentals  2013       139     9.1 46997
 25                    Tosun Pasa  1976        90     8.9 24329
 89  Hababam Sinifi Sinifta Kaldi  1975        95     8.9 24369
 73                 Süt Kardesler  1976        80     8.8 20889</code></pre>
@@ -455,12 +455,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>                             names years durations ratings votes
 411                 Cumali Ceber 2  2018       100     1.2 10230
-421                          Müjde  2022       288     1.2  9919
+421                          Müjde  2022       288     1.2  9920
 467              15/07 Safak Vakti  2021        95     1.2 20608
 323 Cumali Ceber: Allah Seni Alsin  2017       100     1.0 39269
 372                           Reis  2017       108     1.0 73974</code></pre>
 </div>
 </div>
+<p>I can say the following about the films in the top 5: Like all Turkish people, I watched them all many times and I think they deserve the ratings they got. All of them are movies that have been watched over and over again for years and continue to be watched.</p>
+<p>I don’t have enough information to comment on the last 5 movies. There are some I’ve heard of but I haven’t watched any of them.</p>
 </section>
 <section id="b-" class="level1">
 <h1>b-)</h1>
@@ -470,8 +472,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>                      names years durations ratings votes
 1 Ayla: The Daughter of War  2017       125     8.3 42992
-2            Babam ve Oglum  2005       108     8.2 91035
-3  Yedinci Kogustaki Mucize  2019       132     8.2 54171</code></pre>
+2            Babam ve Oglum  2005       108     8.2 91037
+3  Yedinci Kogustaki Mucize  2019       132     8.2 54172</code></pre>
 </div>
 </div>
 </section>
@@ -528,7 +530,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(movies<span class="sc">$</span>votes, movies<span class="sc">$</span>ratings)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Correlation between Votes and Ratings:"</span>, correlation, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Correlation between Votes and Ratings: 0.130875 </code></pre>
+<pre><code>Correlation between Votes and Ratings: 0.1308758 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(movies, <span class="fu">aes</span>(<span class="at">x =</span> votes, <span class="at">y =</span> ratings, <span class="at">color =</span> ratings)) <span class="sc">+</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
@@ -542,6 +544,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="assignment-2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>The correlation coefficient, which stands at 0.130875, is rather low. We might conclude that there is a weak linear relationship between Ratings and Votes in this instance.</p>
 </section>
 <section id="e-" class="level1">
 <h1>e-)</h1>
@@ -564,6 +567,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="assignment-2_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>With a correlation of 0.03186651, it is rather low. We may conclude that there is a weak linear relationship between Durations and Votes in this instance. We may conclude that there is a better correlation between Ratings and Votes when comparing Ratings with Durations and Ratings with Votes.</p>
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
 <div class="cell">
@@ -604,15 +608,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>merged_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                       names years year durations ratings votes
-1   Yedinci Kogustaki Mucize  2019 2019       132     8.2 54171
-2                 Kis Uykusu  2014 2014       196     8.0 54646
+1   Yedinci Kogustaki Mucize  2019 2019       132     8.2 54172
+2                 Kis Uykusu  2014 2014       196     8.0 54647
 3      Nefes: Vatan Sagolsun  2009 2009       128     8.0 35022
 4  Ayla: The Daughter of War  2017 2017       125     8.3 42992
-5             Babam ve Oglum  2005 2005       108     8.2 91035
+5             Babam ve Oglum  2005 2005       108     8.2 91037
 6                Ahlat Agaci  2018 2018       188     8.0 27015
 7    Bir Zamanlar Anadolu'da  2011 2011       157     7.8 49365
 8                     Eskiya  1996 1996       128     8.1 71704
-9                   G.O.R.A.  2004 2004       127     8.0 66033
+9                   G.O.R.A.  2004 2004       127     8.0 66032
 10                 Vizontele  2001 2001       110     8.0 38403
 11  Her Sey Çok Güzel Olacak  1998 1998       107     8.1 27122</code></pre>
 </div>
@@ -625,12 +629,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>                           names years durations ratings votes
 9                 Hababam Sinifi  1975        87     9.2 42512
-261       CM101MMXI Fundamentals  2013       139     9.1 46996
+261       CM101MMXI Fundamentals  2013       139     9.1 46997
 25                    Tosun Pasa  1976        90     8.9 24329
 89  Hababam Sinifi Sinifta Kaldi  1975        95     8.9 24369
 73                 Süt Kardesler  1976        80     8.8 20889
 36              Saban Oglu Saban  1977        90     8.7 18534
-59                    Zügürt Aga  1985       101     8.7 16135
+59                    Zügürt Aga  1985       101     8.7 16136
 69                 Neseli Günler  1978        95     8.7 11807
 75                   Kibar Feyzo  1978        83     8.7 17126
 132      Hababam Sinifi Uyaniyor  1976        94     8.7 20640
